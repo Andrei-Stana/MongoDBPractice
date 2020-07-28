@@ -9,7 +9,7 @@ namespace MongoDBPractice
         static void Main(string[] args)
         {
          
-            {
+            
 
                 //Takes your given data and saves it into the Db
 
@@ -34,7 +34,7 @@ namespace MongoDBPractice
                 CRUD db = new CRUD("Personenbuch");
                 db.insertRecord("Nutzer", new Personenbeschreibung { firstName = firstname, lastName = lastname, Age = intAge, Code = randomNumber });
                 Console.ReadKey();
-            }
+            
 
         }
 
