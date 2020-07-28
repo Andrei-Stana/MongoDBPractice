@@ -17,20 +17,20 @@ namespace MongoDBPractice
             Console.WriteLine("Wie alt bist du?");
             string age = Console.ReadLine();
             int intAge = Int16.Parse(age);
-            Console.WriteLine();
+            Console.WriteLine("Dein Konto wird erstellt");
 
-            //Generates your own code to identify (Not done yet)
+            //Generates your own code to identify 
             
-            for (int i = 0; i < 5; i++)
-            {
-                Random randInt = new Random();
-                int randomNumber = randInt.Next(1, 10);
-            }
+                    Random randInt = new Random();
+                    int randomNumber = randInt.Next(1000, 9999);
+                    Console.WriteLine("Dein eigener code ist " + randomNumber);
+            
 
             //Creates a Db and it inserts a record
 
             CRUD db = new CRUD("Personenbuch");
-            db.insertRecord("Nutzer", new Personenbeschreibung { firstName = firstname, lastName = lastname, Age = intAge, Code = 1412 });
+            db.insertRecord("Nutzer", new Personenbeschreibung { firstName = firstname, lastName = lastname, Age = intAge, Code = randomNumber });
+            Console.ReadKey();
         }
 
     }
