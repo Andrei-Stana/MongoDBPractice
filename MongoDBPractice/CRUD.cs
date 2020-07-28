@@ -9,7 +9,7 @@ namespace MongoDBPractice
     {
         //Creates CRUD actions
 
-        private IMongoDatabase db;
+        private readonly IMongoDatabase db;
 
         public CRUD(string database)
         {
